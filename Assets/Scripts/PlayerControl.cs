@@ -13,7 +13,7 @@ public class PlayerControl : MonoBehaviour
     public float jumpforce = 300;
     private float fInput = 0.0f;
     public float maxSpeed = 5;
-    private bool bFaceRight = true;
+    public  bool bFaceRight = true;
     private bool bGrounded = false;
     private bool bJump = false;
     Transform mGroundCheck;
