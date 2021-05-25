@@ -6,9 +6,9 @@ public class BackGrounds : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform[] backGrounds;
-    public float fparallax = 0.4f;
-    public float layerFraction = 5f;
-    public float fSmooth = 5f;
+    public float fparallax = 2f;
+    public float layerFraction = 10f;
+    public float fSmooth = 8f;
 
     Transform cam;
     Vector3 previousCamPos;

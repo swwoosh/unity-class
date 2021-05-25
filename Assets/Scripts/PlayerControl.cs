@@ -13,11 +13,11 @@ public class PlayerControl : MonoBehaviour
     public float jumpforce = 300;
     private float fInput = 0.0f;
     public float maxSpeed = 5;
-    public  bool bFaceRight = true;
+    public  bool bFaceRight = true; 
     private bool bGrounded = false;
     private bool bJump = false;
     Transform mGroundCheck;
-
+    private Animator anim;
 
 
 
@@ -26,6 +26,7 @@ public class PlayerControl : MonoBehaviour
         heroBody = GetComponent<Rigidbody2D>();
         rigidBody = GetComponent<Rigidbody2D>();
         mGroundCheck = transform.Find("GroundCheck");
+        anim = GetComponent<Animator>();
     }
 
 
@@ -43,11 +44,15 @@ public class PlayerControl : MonoBehaviour
         if (bJump)
         {
             rigidBody.AddForce(new Vector2(0f, jumpforce));
+            anim.SetTrigger("jump");
             bJump = false;
         }
 
         bGrounded = Physics2D.Linecast(transform.position, mGroundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
- 
+
+        {
+            anim.SetFloat("speed", Mathf .Abs (heroBody.velocity.x));
+        }
     }
 
 

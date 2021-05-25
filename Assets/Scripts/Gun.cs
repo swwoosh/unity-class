@@ -7,9 +7,11 @@ public class Gun : MonoBehaviour
     public Rigidbody2D Rocket;
     public float fSpeed = 10;
     PlayerControl playerCtrl;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
+        anim = transform.root.gameObject.GetComponent<Animator>();
         playerCtrl = transform.root.GetComponent<PlayerControl>();
     }
 
@@ -31,6 +33,7 @@ public class Gun : MonoBehaviour
                 Rigidbody2D RocketInstance = Instantiate(Rocket, transform.position, Quaternion.Euler(direction ));
                 RocketInstance.velocity = new Vector2(-fSpeed, 0);
             }
+            anim.SetTrigger("shoot");
         }
     }
 }
