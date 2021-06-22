@@ -7,6 +7,9 @@ TagManager:
   - body
   - Enemy
   - wall
+  - BombPickup
+  - Ground
+  - dimian
   layers:
   - Default
   - TransparentFX
@@ -21,9 +24,9 @@ TagManager:
   - 
   - Ground
   - confiner
-  - 
-  - 
-  - 
+  - Enemy
+  - Pickup
+  - Player
   - 
   - 
   - 

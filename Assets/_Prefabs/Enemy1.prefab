@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5904756042571082360}
   - component: {fileID: 7155149041677367000}
   - component: {fileID: 371154951}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -75,6 +75,7 @@ MonoBehaviour:
   HP: 2
   maxSpinForce: 200
   minSpinForce: -200
+  UI_100Points: {fileID: 100006, guid: cdf7752b910743342a461921f0519086, type: 3}
 --- !u!58 &371154951
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -101,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5904756043420461643}
   - component: {fileID: 5904756043420461644}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: frontcheck
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -182,7 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9080568892273620910}
   - component: {fileID: 6043664146098170727}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

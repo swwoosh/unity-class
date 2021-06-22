@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     public int HP = 2;
     public float maxSpinForce = 200;
     public float minSpinForce = -200;
+    public GameObject UI_100Points;
 
     private Rigidbody2D enemyBody;
     private Transform frontCheck;
@@ -29,7 +30,7 @@ public class Enemy : MonoBehaviour
 
         foreach (Collider2D c in colliders )
         {
-            if(c.tag == "wall"||c.tag == "Enemy")
+            if(c.tag == "wall")
             {
                 flip();
                 break;
@@ -59,6 +60,7 @@ public class Enemy : MonoBehaviour
     void death()
     {
         isDead = true;
+        
         curBody.sprite  = deadEnemy;
 
         Collider2D[] cols = GetComponents<Collider2D>();
@@ -66,7 +68,12 @@ public class Enemy : MonoBehaviour
         {
             c.isTrigger = true;
         }
-        //enemyBody.AddForce(Random.Range(minSpinForce, maxSpinForce));
+
+        enemyBody.freezeRotation = false;//解除z轴锁定，让他能被施扭矩力
+        enemyBody.AddTorque(Random.Range(minSpinForce, maxSpinForce));//掉下去旋转的扭矩
+
+        Vector3 UI100Pos = new Vector3(transform .position .x ,transform.position.y  + 1.5f,transform .position .z );
+        Instantiate(UI_100Points ,transform .position ,Quaternion .identity );
 
     }
     // Start is called before the first frame update

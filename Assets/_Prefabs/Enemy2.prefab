@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5000000}
   - component: {fileID: 5800000}
   - component: {fileID: 634729287}
-  m_Layer: 0
-  m_Name: enemy2
+  m_Layer: 13
+  m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   HP: 1
   maxSpinForce: 200
   minSpinForce: -200
+  UI_100Points: {fileID: 100006, guid: cdf7752b910743342a461921f0519086, type: 3}
 --- !u!1 &100004
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400004}
   - component: {fileID: 21200002}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400006}
   - component: {fileID: 21200000}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400008}
   - component: {fileID: 21200004}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: eyelid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400010}
   - component: {fileID: 21200006}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 400012}
   - component: {fileID: 48524229}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: frontcheck
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
